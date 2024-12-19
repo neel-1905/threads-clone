@@ -3,10 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
 
-  experimental: {
-    // serverActions: true,
-    serverComponentsExternalPackages: ["mongoose"],
-  },
+  // experimental: {
+  //   // serverActions: true,
+  //   serverComponentsExternalPackages: ["mongoose"],
+  // },
+
+  serverExternalPackages: ["mongoose"],
 
   images: {
     remotePatterns: [
