@@ -14,15 +14,19 @@ const page = async ({ params }: { params: { id: string } }) => {
 
   const userInfo = await fetchUser(params.id);
 
+  console.log("user info", userInfo);
+
+  if (!userInfo) return null;
+
   return (
     <section>
       <ProfileHeader
         accountId={userInfo?.id}
-        authUser={user.id}
-        username={userInfo.username}
-        name={userInfo.name}
-        imgUrl={userInfo.image}
-        bio={userInfo.bio}
+        authUser={user?.id}
+        username={userInfo?.username}
+        name={userInfo?.name}
+        imgUrl={userInfo?.image}
+        bio={userInfo?.bio}
       />
 
       <div className="mt-9">
@@ -57,8 +61,8 @@ const page = async ({ params }: { params: { id: string } }) => {
                 className="w-full text-light-1"
               >
                 <ThreadsTab
-                  currentUserId={user.id}
-                  accountId={userInfo.id}
+                  currentUserId={user?.id}
+                  accountId={userInfo?.id}
                   accountType="User"
                 />
               </TabsContent>

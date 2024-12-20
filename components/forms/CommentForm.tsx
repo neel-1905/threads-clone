@@ -48,9 +48,6 @@ const CommentForm = (props: CommentProps) => {
       JSON.parse(currentUserId),
       pathname
     );
-
-    console.log(res);
-    router.push("/");
   };
 
   return (

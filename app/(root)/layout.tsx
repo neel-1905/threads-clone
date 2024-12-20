@@ -28,22 +28,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <TopBar />
-          <main className="flex flex-row">
-            <LeftSidebar />
-            <section className="main-container">
-              <div className="w-full max-w-4xl">{children}</div>
-            </section>
-            <RightSidebar />
-          </main>
-          <BottomBar />
-        </body>
-      </html>
-    </ClerkProvider>
+    // <ClerkProvider>
+    <div>
+      <TopBar />
+      <main className="flex flex-row">
+        <LeftSidebar />
+        <section className="main-container">
+          <div className="w-full max-w-4xl">{children}</div>
+        </section>
+        <RightSidebar />
+      </main>
+      <BottomBar />
+    </div>
+
+    // </ClerkProvider>
   );
 }

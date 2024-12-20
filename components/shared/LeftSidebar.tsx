@@ -9,7 +9,7 @@ import React from "react";
 
 const LeftSidebar = () => {
   const pathname = usePathname();
-  const { userId, isLoaded } = useAuth();
+  const { userId } = useAuth();
 
   return (
     <section className="custom-scrollbar leftsidebar">
