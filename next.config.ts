@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
   //   serverComponentsExternalPackages: ["mongoose"],
   // },
 
+  reactStrictMode: true,
+
   serverExternalPackages: ["mongoose"],
 
   images: {
