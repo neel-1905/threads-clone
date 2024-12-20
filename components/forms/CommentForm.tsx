@@ -41,7 +41,6 @@ const CommentForm = (props: CommentProps) => {
   });
 
   const onSubmit = async (values: z.infer<typeof commentValidation>) => {
-    console.log("submitting");
     const res = await addCommentToThread(
       threadId,
       values.thread,
